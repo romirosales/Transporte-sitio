@@ -50,6 +50,7 @@ footer{
     background-color: #ddd;
     padding: 20px 0;
     text-align: center;
+    margin-top: 20px;
 }
 .holder{
     width: 960px;
@@ -72,4 +73,17 @@ width: 25%;
 .testimonio{
     background-color: #ddd;
     padding: 16px;
+    
+}
+.testimonio .cita{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    display: block;
+}
+.testimonio .autor{
+    font-size: 12px;
+    margin: 20px;
+    display: block;
+    justify-content: center;
 }
