@@ -42,6 +42,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     background: rgba(0,0,0,0.3);/*la a de rgba es para sacar opacidad*/
+    transition: all 0.5s ease;
 }
 nav ul li a.activo{/*va pegado a la (a)cuando es una clase que solo va dirigida a un elemtneo particular y no a todos los hijos*/
     background-color: #4c76a5;
@@ -129,8 +130,51 @@ font-style: italic;
     text-align: left;
 }
 /*fin nosotros*/
+/* inicio Servicios ---------------------------------*/
 
-/*inicio contacto*/
+.servicios{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: red;
+}
+.servicio{
+    /*border: 1px solid #ddd;
+    border-radius: 5px;*/
+    
+    background-color: yellow;
+    
+}
+.servicio h2{
+    font-size: 15px;
+    font-style: italic;
+    
+}
+.servicio  p{
+    font-size: 15px;
+    font-weight: normal;
+}
+.linea{
+    color: #6da9ed;
+}
+.medios{
+    background-color: aqua;
+    height: 180px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 15px;
+    
+}
+.servicio img{
+    border-radius: 15px;
+}
+
+
+
+
+/*inicio contacto -------------------------------------*/
 
 .contacto{
     display: flex;
@@ -147,15 +191,63 @@ font-style: italic;
     font-size: 12px;
     list-style: none;
 }
+.formulario p{
+display: flex;/*esto sirve para poner uno al lado del otro*/
+}
 
 
 .formulario p input,
 .formulario p textarea{
 width: 70%;
+background-color: #ddd;
+border-radius: 5px;
+border: 1px solid #999;
+font-size: 14px ;
+padding: 6px 10px;
+
 }
 .formulario p label{
-    width: 80px;
+    min-width: 80px;
     display: block;
+    display: flex;
+    align-items: center;
+}
+.formulario textarea{
+    height: 150px;
+    resize: none;
+}
+/*.formulario p label.arriba{
+    align-items: start;
+}*/   
+.formulario p:nth-child(4){/*es otra manera de llamr a un hijo de alguna clase o sea no haría falta la clase "arriba" y solo lo manejamos desde el css*/
+    align-items: start;
+}
+/*pueden ser hijo
+ :nth-child(even) (par)
+ :nth-child(odd) (impar)
+ :nth-child(4)el hijo x que vos quieras
+ :nth-child(5n) el hijo que va de 5 en 5, o sea el 5,10,15*/
+/*ejemplo*/
+.persona:nth-child(odd){
+    background-color: lightcoral;
+}
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    color: white;
+    box-shadow:0 0 10px rgba(0,0,0,0.4) ;
+    font-size: 14px;
+    padding: 6px;
+    width: auto;
+    cursor: pointer;
+   /* margin-left: 80px;*/
+   position: relative;
+   left: 80px;/* se puede mover tanto con un margin como con position relative*/ 
+   transition: all 0.8s ease;
+}
+.formulario input[type="submit"]:hover{
+background-color: #2e64a1;
 }
 
-    
+
+
+
