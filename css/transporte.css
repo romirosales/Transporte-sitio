@@ -185,7 +185,7 @@ font-style: italic;
 }
 .contacto div{
     width: 100%;/*detro de la separacion del gao anterior que cada uno asuma el 100%*/
-
+/*aca cuando se pase a @media hay que sacarle el 100 y ponerle 80%*/
 }
 .datos p{
     font-size: 14px;
@@ -270,7 +270,42 @@ background-color: #2e64a1;
         max-width: 220px;
         margin: 0 auto;
     }
+    .personas{
+        flex-wrap:wrap ;/*tiene que haber desbordamiento para que baje*/
+    }
+    .persona{
+        width: 48%;
+        margin-bottom: 10px;
+    }
+    .contacto{
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header h1{
+        position: static;
+    }
+    nav ul.holder{
+        flex-direction: column;
+       /* padding: 0;
+       margin: 0;*/
+    }
 
+}
+@media screen and (max-width:320px){
+header.holder{
+    flex-direction: column; 
+}
+header .logo img{
+    width: 60px;
+}
+header h1{
+    margin: 10px;
+    font-size:20px ;
+}
 }
 
 
